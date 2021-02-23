@@ -1,0 +1,31 @@
+//codigo css para el elemento home.vue
+@import "./variables";
+@import "./mixins";
+.hero-image{
+    padding:20%;
+    @include flexCentrar();
+    @include flexDir(column);
+    color:white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://firebasestorage.googleapis.com/v0/b/tienda-online-f0293.appspot.com/o/imagenes%2FHero.jpg?alt=media&token=8a703a3e-6a86-4736-9b85-9f78f730ed58');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50%;
+}
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2vw;
+	margin-top: 2vw;
+}
+.hero-link{
+    text-decoration: none;
+    padding:0.7vw;
+    border-radius: 5px;
+    @include colorear(rgb(112, 64, 189),rgba(240, 255, 255,0.4));
+}

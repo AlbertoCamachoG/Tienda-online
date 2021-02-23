@@ -1,0 +1,41 @@
+//codigo css para el elemento cabecera.vue
+@import "./variables";
+@import "./mixins";
+.cabecera{
+    @include flexCentrar();
+    justify-content: space-between;
+    @include espaciado(0px,15px);
+    @include colorear(azure,rgb(10, 45, 78));
+    .logo{
+        @include flexCentrar();
+        .logoVector{
+            margin-right:18px;
+        }
+    }
+    .carro{
+        @include flexCentrar();
+        button{
+            border-radius: 50px;
+            padding:8px
+        }
+    }.pro{
+        @include flexCentrar();
+        @include flexDir(row);
+        p{
+            margin-left:20px;
+        }
+        .tiend-link{
+            color:white;
+        }
+        
+    }
+    
+}
+.link{
+    @include colorear(azure,rgb(10, 45, 78));
+}
+@media(max-width: 700px){
+    .cabecera{
+        @include flexDir(column);
+    }
+}

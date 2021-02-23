@@ -1,0 +1,72 @@
+//codigo css para el elemento producto.vue
+@import "./variables";
+@import "./mixins";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+.productos{
+    @include flexCentrar;
+    @include flexDir(row);
+    .producto{
+        overflow: hidden;
+        font-family: 'Noto Sans', sans-serif;
+        @include ancho(22%);
+        min-height: 500px;
+        min-width: 300px;
+        @include flexCentrar;
+        @include flexDir(column);
+        @include borde($B,1px);
+        @include colorear($B,#e6ecea);
+        border-radius: 20px;
+        text-align: center;
+        @include espaciado(50px,20px);
+        hr{
+            @include ancho(70%)
+        }
+        p{
+            @include reset;
+            @include espaciado(0px,5px);
+        }
+        .comprar{
+            @include colorear($B,#e6ecea);
+            border-radius: 1000px;
+            @include espaciado(0px,10px);
+            &:hover{
+                @include colorear($B,#96e2c9);
+            }
+        }
+        img{
+            border-radius: 30px
+        }
+    }
+    .anadir{
+        @include ancho(20%);
+        @include espaciado(30%,30px);
+        margin-top: 0px;
+        margin-bottom: 0px;
+        min-width: 300px;
+        @include flexCentrar;
+        @include position(sticky);
+        @include flexDir(column);
+        top:40%;
+        @include borde($B,3px);
+        @include colorear($B,lightblue);
+        justify-content: space-around !important;
+        padding-top:0px;
+        border-radius: 20px;
+        input,button{
+            margin:10px
+        }
+        .cerrar{
+            align-self: flex-end;
+            @include colorear($B,rgb(180, 33, 33));
+            margin-right: -7%;
+            font-weight: bold;
+        }
+    }
+}
+.title{
+    @include flexCentrar;
+}
+.hr{
+    @include ancho(50%);;
+}

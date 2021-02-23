@@ -1,0 +1,60 @@
+//codigo css para el elemento pie.vue
+@import "./variables";
+@import "./mixins";
+.footer{
+    @include colorear(azure,#134d3b);
+    @include flexDir(row);
+    @include flexCentrar();
+    justify-content: space-around;
+    text-align: center;
+    align-items: flex-start;
+    a{
+        text-decoration: none;
+        @include colorear(azure,#134d3b);
+    }
+}
+.bg{
+    @include colorear(azure,#134d3b);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.field {
+	display: flex;
+	width: 330px;
+	justify-content: space-around;
+}
+
+.sns-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	border: none;
+	transition-duration: .5s;
+	transform: rotateX(45deg);
+	box-shadow: 0px 10px 5px rgba(0, 0, 0, .3);
+	cursor: pointer;
+	&--twitter {
+		background-color: #1da1f2!important;
+	}
+	&--facebook {
+		background-color: #3b5998!important;
+	}
+	&--instagram {
+		background-color: #dd2b75!important;
+	}
+	&:hover {
+		transform: scale(1.2);
+		box-shadow: none;
+	}
+	&__icon {
+		font-size: 33px;
+		letter-spacing: 0.1em;
+		color: #fff;
+	}
+}

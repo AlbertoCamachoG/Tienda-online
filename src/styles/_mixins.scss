@@ -1,0 +1,36 @@
+//Todo tipo de agrupaciones de efectos para mayor comodidad
+@mixin ancho($ancho) {
+    width:$ancho;    
+}
+@mixin alto($alto) {
+    height:$alto;
+}
+@mixin colorear($texto,$fondo) {
+    color:$texto;
+    background-color: $fondo;
+}
+@mixin flexCentrar {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexDir($direccion) {
+    display:flex;
+    flex-direction: $direccion;
+}
+@mixin reset {
+    margin:0;
+    padding:0;
+}
+@mixin espaciado($m,$p) {
+    margin: $m;
+    padding: $p;
+}
+@mixin borde($color,$px) {
+    border-collapse: collapse;
+    border:solid $color $px
+}
+@mixin position($p) {
+    position:$p;
+}
